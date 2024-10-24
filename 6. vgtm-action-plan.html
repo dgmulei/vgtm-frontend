@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            padding: 20px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #ffffff;
+        }
+
+        .logo {
+            width: 80px;
+        }
+
+        .top-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            position: relative;
+        }
+
+        .breadcrumb {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .breadcrumb a {
+            color: #666666;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+        }
+
+        .playbook-title {
+            color: #333333;
+            font-size: 16px;
+            font-weight: normal;
+            display: inline;
+        }
+
+        .meta {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .save-button {
+            position: absolute;
+            right: 40px;
+            top: 20px;
+            background-color: #4A4FE4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 30px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .tab-bar {
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .tab {
+            padding: 12px 40px;
+            color: #666666;
+            text-decoration: none;
+            font-size: 14px;
+            flex: 1;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .tab.active {
+            background-color: #4A4FE4;
+            color: white;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .overview-box {
+            background-color: #f8f8f8;
+            border: 2px solid #f0f0f0;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .overview-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .overview-text {
+            font-size: 16px;
+            color: #333333;
+        }
+
+        .week-box {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        .week-title {
+            font-size: 18px;
+            color: #4A4FE4;
+            margin-bottom: 20px;
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .task-item {
+            color: #333333;
+            font-size: 14px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .task-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333333;
+        }
+
+        .task-item:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="vgtm-logo.png" alt="vGTM Logo" class="logo">
+    </div>
+
+    <div class="top-container">
+        <div class="breadcrumb">
+            <a href="dashboard.html">Dashboard</a>
+            <span>></span>
+            <div class="playbook-title">Marketing Playbook: MedPathway</div>
+        </div>
+
+        <div class="meta">
+            Created Oct 23 • Budget: $5,000
+        </div>
+
+        <button class="save-button">Save Playbook</button>
+
+        <div class="tab-bar">
+            <a href="#" class="tab">Growth Strategy</a>
+            <a href="#" class="tab active">Action Plan</a>
+            <a href="#" class="tab">Success Metrics</a>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="overview-box">
+            <div class="overview-title">Your 30-Day Growth Plan</div>
+            <div class="overview-text">We'll start with Reddit and build momentum from there. Here's your roadmap:</div>
+        </div>
+
+        <div class="week-box">
+            <div class="week-title">Week 1: Build Your Reddit Presence</div>
+            <ul class="task-list">
+                <li class="task-item">Join r/premed and observe the most common course planning questions</li>
+                <li class="task-item">Create your first helpful post about avoiding common planning mistakes</li>
+                <li class="task-item">Start with $500 for promoted posts targeting pre-med communities</li>
+            </ul>
+        </div>
+
+        <div class="week-box">
+            <div class="week-title">Week 2: Expand to LinkedIn</div>
+            <ul class="task-list">
+                <li class="task-item">Connect with 10-15 pre-med advisors using our outreach template</li>
+                <li class="task-item">Share your first case study of how MedPathway helps students</li>
+                <li class="task-item">Invest $750 in targeted ads for education professionals</li>
+            </ul>
+        </div>
+
+        <div class="week-box">
+            <div class="week-title">Weeks 3-4: Scale What Works</div>
+            <ul class="task-list">
+                <li class="task-item">Double down on your best performing Reddit content ($1,000)</li>
+                <li class="task-item">Launch Google Search ads targeting "pre-med course planner" ($750)</li>
+                <li class="task-item">Collect and highlight testimonials from your first users</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

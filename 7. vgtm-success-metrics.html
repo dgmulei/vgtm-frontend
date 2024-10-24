@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            padding: 20px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #ffffff;
+        }
+
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .top-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            position: relative;
+        }
+
+        .breadcrumb {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .breadcrumb a {
+            color: #666666;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+        }
+
+        .playbook-title {
+            color: #333333;
+            font-size: 16px;
+            display: inline;
+        }
+
+        .meta {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .save-button {
+            position: absolute;
+            right: 40px;
+            top: 20px;
+            background-color: #4A4FE4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 30px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .tab-bar {
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .tab {
+            padding: 12px 40px;
+            color: #666666;
+            text-decoration: none;
+            font-size: 14px;
+            flex: 1;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .tab.active {
+            background-color: #4A4FE4;
+            color: white;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .overview-box {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .overview-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .overview-text {
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .metrics-box {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        .metrics-title {
+            font-size: 18px;
+            color: #4A4FE4;
+            margin-bottom: 20px;
+        }
+
+        .metrics-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .metrics-item {
+            color: #333333;
+            font-size: 14px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .metrics-item::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #333333;
+        }
+
+        .metrics-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .warning-box {
+            background-color: #f8f8f8;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="vgtm-logo.png" alt="vGTM Logo" class="logo">
+    </div>
+
+    <div class="top-container">
+        <div class="breadcrumb">
+            <a href="dashboard.html">Dashboard</a>
+            <span>></span>
+            <div class="playbook-title">Marketing Playbook: MedPathway</div>
+        </div>
+
+        <div class="meta">
+            Created Oct 23 • Budget: $5,000
+        </div>
+
+        <button class="save-button">Save Playbook</button>
+
+        <div class="tab-bar">
+            <a href="#" class="tab">Growth Strategy</a>
+            <a href="#" class="tab">Action Plan</a>
+            <a href="#" class="tab active">Success Metrics</a>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="overview-box">
+            <div class="overview-title">How to Know Your Strategy is Working</div>
+            <div class="overview-text">Clear signs that you're on the right track, and when to make adjustments</div>
+        </div>
+
+        <div class="metrics-box">
+            <div class="metrics-title">Reddit: Signs of Success</div>
+            <ul class="metrics-list">
+                <li class="metrics-item">Posts getting 5+ thoughtful comments within 24 hours</li>
+                <li class="metrics-item">Users asking specific questions about your tool's features</li>
+                <li class="metrics-item">Cost per click staying under $1.00 (current average: $0.75)</li>
+            </ul>
+        </div>
+
+        <div class="metrics-box">
+            <div class="metrics-title">LinkedIn: Signs of Success</div>
+            <ul class="metrics-list">
+                <li class="metrics-item">Pre-med advisors sharing your posts with their networks</li>
+                <li class="metrics-item">Direct messages from education professionals</li>
+                <li class="metrics-item">Cost per lead under $20 with steady conversion rate</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <div class="metrics-title">When to Make Changes</div>
+            <ul class="metrics-list">
+                <li class="metrics-item">If posts receive no engagement after 48 hours, try a different angle</li>
+                <li class="metrics-item">If cost per click rises above targets, pause and adjust targeting</li>
+                <li class="metrics-item">If you're getting clicks but no sign-ups, let's review your landing page</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            padding: 20px 40px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .logo {
+            width: 80px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 40px;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 28px;
+            margin: 0 0 30px 0;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 30px;
+        }
+
+        .form-label {
+            display: block;
+            color: #666666;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .budget-field {
+            width: 200px;
+        }
+
+        .textarea-field {
+            width: 100%;
+            height: 160px;
+            padding: 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+            color: #333333;
+            font-family: Arial, sans-serif;
+            resize: vertical;
+        }
+
+        .button-group {
+            margin-top: 40px;
+        }
+
+        .create-button {
+            background-color: #4A4FE4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+
+        .cancel-button {
+            background-color: white;
+            color: #666666;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        ::placeholder {
+            color: #999999;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="vgtm-logo.png" alt="vGTM Logo" class="logo">
+    </div>
+    
+    <div class="container">
+        <h1>Let's create your playbook</h1>
+        
+        <form>
+            <div class="form-group">
+                <label class="form-label">What's your marketing budget?</label>
+                <input type="text" placeholder="Enter amount in USD" class="input-field budget-field">
+            </div>
+            
+            <div class="form-group">
+                <label class="form-label">Tell us about your product</label>
+                <textarea class="textarea-field" placeholder="Share what makes your product special, who it's for, and why they'll love it..."></textarea>
+            </div>
+            
+            <div class="button-group">
+                <button type="submit" class="create-button">Create</button>
+                <button type="button" class="cancel-button">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

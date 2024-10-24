@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            padding: 20px 40px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .logo {
+            width: 80px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 40px;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 28px;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .create-button {
+            background-color: #4A4FE4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 24px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .playbook-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .playbook-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .playbook-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333333;
+            margin-bottom: 10px;
+        }
+
+        .playbook-meta {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .playbook-detail {
+            color: #333333;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .view-button {
+            background-color: #4A4FE4;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 20px;
+            font-size: 12px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="vgtm-logo.png" alt="vGTM Logo" class="logo">
+    </div>
+    
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Marketing Playbooks</h1>
+            <button class="create-button">Create Playbook</button>
+        </div>
+        
+        <div class="playbook-grid">
+            <div class="playbook-card">
+                <div class="playbook-title">MedPathway</div>
+                <div class="playbook-meta">Created Oct 23 • Budget: $5,000</div>
+                <div class="playbook-detail">Focus: Reddit, LinkedIn</div>
+                <div class="playbook-detail">Primary audience: Pre-med students</div>
+                <button class="view-button">View Plan</button>
+            </div>
+
+            <div class="playbook-card">
+                <div class="playbook-title">PodConnect</div>
+                <div class="playbook-meta">Created Oct 24 • Budget: $3,000</div>
+                <div class="playbook-detail">Focus: Instagram, TikTok</div>
+                <div class="playbook-detail">Primary audience: Podcast creators</div>
+                <button class="view-button">View Plan</button>
+            </div>
+
+            <div class="playbook-card">
+                <div class="playbook-title">VoxPop</div>
+                <div class="playbook-meta">Created Oct 25 • Budget: $7,500</div>
+                <div class="playbook-detail">Focus: YouTube, Facebook</div>
+                <div class="playbook-detail">Primary audience: Curiosity seekers</div>
+                <button class="view-button">View Plan</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

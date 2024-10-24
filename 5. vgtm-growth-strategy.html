@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            padding: 20px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #ffffff;
+        }
+
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .top-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            position: relative;
+        }
+
+        .breadcrumb {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .breadcrumb a {
+            color: #666666;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+        }
+
+        .playbook-title {
+            color: #333333;
+            font-size: 16px;
+            display: inline;
+        }
+
+        .meta {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .save-button {
+            position: absolute;
+            right: 40px;
+            top: 20px;
+            background-color: #4A4FE4;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 30px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .tab-bar {
+            display: flex;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .tab {
+            padding: 12px 40px;
+            color: #666666;
+            text-decoration: none;
+            font-size: 14px;
+            flex: 1;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .tab.active {
+            background-color: #4A4FE4;
+            color: white;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .roi-box {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .roi-title {
+            font-size: 28px;
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        .roi-insight {
+            color: #333333;
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .roi-insight::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .platform-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+        .table-header {
+            background-color: #4A4FE4;
+            color: white;
+        }
+
+        .table-header th {
+            padding: 15px 20px;
+            text-align: left;
+            font-size: 14px;
+            font-weight: normal;
+        }
+
+        .table-row td {
+            padding: 15px 20px;
+            font-size: 14px;
+            color: #333333;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .table-row:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="vgtm-logo.png" alt="vGTM Logo" class="logo">
+    </div>
+
+    <div class="top-container">
+        <div class="breadcrumb">
+            <a href="dashboard.html">Dashboard</a>
+            <span>></span>
+            <div class="playbook-title">Marketing Playbook: MedPathway</div>
+        </div>
+
+        <div class="meta">
+            Created Oct 23 • Budget: $5,000
+        </div>
+
+        <button class="save-button">Save Playbook</button>
+
+        <div class="tab-bar">
+            <a href="#" class="tab active">Growth Strategy</a>
+            <a href="#" class="tab">Action Plan</a>
+            <a href="#" class="tab">Success Metrics</a>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="roi-box">
+            <div class="roi-title">Here's Where You'll Get the Best Results</div>
+            <div class="roi-insight">Reddit is your goldmine: 450,000+ potential customers actively discussing pre-med topics</div>
+            <div class="roi-insight">Your ads will perform 2x better than average (3-5% click rate)</div>
+            <div class="roi-insight">Each potential customer costs only $0.75 to reach - perfect for your budget</div>
+        </div>
+
+        <div class="table-container">
+            <table class="platform-table">
+                <thead class="table-header">
+                    <tr>
+                        <th>PLATFORM</th>
+                        <th>AUDIENCE</th>
+                        <th>STRATEGY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-row">
+                        <td>Reddit</td>
+                        <td>450,000+ pre-med students</td>
+                        <td>Focus on r/premed and r/MCAT with valuable planning tips</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>LinkedIn</td>
+                        <td>25,000+ pre-med advisors</td>
+                        <td>Partner with advisors to reach their student networks</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Google Search</td>
+                        <td>8,500 monthly searches</td>
+                        <td>Target "pre-med planning" and "MCAT preparation" keywords</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Instagram</td>
+                        <td>320,000 #premedlife followers</td>
+                        <td>Collaborate with study-focused influencers</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>TikTok</td>
+                        <td>100M+ #premedstudent views</td>
+                        <td>Create quick tips and study hacks content</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Facebook</td>
+                        <td>20,000+ in pre-med groups</td>
+                        <td>Share success stories in student communities</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>YouTube</td>
+                        <td>2M+ MCAT prep viewers</td>
+                        <td>Partner with educational content creators</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
