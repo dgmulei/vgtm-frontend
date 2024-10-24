@@ -59,18 +59,36 @@
             margin: 8px 0 24px 0;
         }
 
-        .save-button {
-            background-color: #4A4FE4;
-            color: white;
-            border: none;
+        .methodology-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #666666;
+            background: white;
+            border: 1px solid #e0e0e0;
             border-radius: 6px;
-            padding: 15px 30px;
-            font-size: 16px;
+            padding: 10px 16px;
             cursor: pointer;
-            width: 100%;
+            transition: all 0.2s ease;
+            text-decoration: none;
             margin-bottom: 20px;
-            -webkit-appearance: none;
-            appearance: none;
+        }
+
+        .methodology-button:hover {
+            color: #333333;
+            border-color: #999999;
+        }
+
+        .methodology-button svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .methodology-container {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
         }
 
         .tab-bar {
@@ -243,7 +261,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="vgtm-logo.png" alt="vGTM Logo" class="logo">
+        <img src="/api/placeholder/120/40" alt="vGTM Logo" class="logo" />
     </div>
 
     <div class="top-container">
@@ -257,7 +275,12 @@
             Created Oct 23 • Budget: $5,000
         </div>
 
-        <button class="save-button">Save Playbook</button>
+        <div class="methodology-container">
+            <button class="methodology-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>View Data, Sources, and Methodology</span>
+            </button>
+        </div>
 
         <div class="tab-bar">
             <a href="#" class="tab active">Growth Strategy</a>
