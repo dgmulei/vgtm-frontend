@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -14,8 +22,10 @@
         }
 
         .login-container {
-            width: 300px;
-            padding: 40px;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            margin: 20px;
             border-radius: 8px;
             border: 2px solid #f0f0f0;
             background: #ffffff;
@@ -46,9 +56,10 @@
             margin-bottom: 15px;
             border: 1px solid #e0e0e0;
             border-radius: 6px;
-            box-sizing: border-box;
-            font-size: 14px;
+            font-size: 16px;
             color: #333333;
+            -webkit-appearance: none;
+            appearance: none;
         }
 
         .signin-button {
@@ -61,6 +72,8 @@
             font-size: 16px;
             cursor: pointer;
             margin-bottom: 20px;
+            -webkit-appearance: none;
+            appearance: none;
         }
 
         .signup-text {
@@ -73,6 +86,25 @@
             text-decoration: underline;
             cursor: pointer;
         }
+
+        @media (max-width: 480px) {
+            .login-container {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .input-field {
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+        }
+
+        @media (max-width: 360px) {
+            .login-container {
+                margin: 0;
+                border: none;
+                border-radius: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -83,7 +115,7 @@
         <input type="email" placeholder="Email" class="input-field">
         <input type="password" placeholder="Password" class="input-field">
         <button class="signin-button">Sign In</button>
-        <span class="signup-text">New to vGTM? <a href="#" class="signup-link">Create an account</a></span>
+        <span class="signup-text">New to vGTM? <a href="vgtm-register.html" class="signup-link">Create an account</a></span>
     </div>
 </body>
 </html>
