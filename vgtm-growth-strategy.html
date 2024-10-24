@@ -34,7 +34,6 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            position: relative;
         }
 
         .breadcrumb {
@@ -52,20 +51,10 @@
             text-decoration: none;
         }
 
-        .breadcrumb span {
-            color: #666666;
-        }
-
-        .playbook-title {
-            color: #333333;
-            font-size: 16px;
-            display: inline;
-        }
-
         .meta {
             color: #666666;
             font-size: 14px;
-            margin: 8px 0 24px 0;
+            margin-bottom: 24px;
         }
 
         .save-button {
@@ -76,9 +65,10 @@
             padding: 12px 30px;
             font-size: 14px;
             cursor: pointer;
+            width: 100%;
+            margin-bottom: 20px;
             -webkit-appearance: none;
             appearance: none;
-            margin-bottom: 20px;
         }
 
         .tab-bar {
@@ -86,18 +76,18 @@
             border: 1px solid #e0e0e0;
             border-radius: 6px;
             overflow: hidden;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             width: 100%;
         }
 
         .tab {
-            padding: 12px;
+            padding: 12px 15px;
             color: #666666;
             text-decoration: none;
             font-size: 14px;
             flex: 1;
             text-align: center;
-            white-space: nowrap;
+            min-width: 0;
         }
 
         .tab.active {
@@ -116,7 +106,7 @@
             background-color: #f8f8f8;
             border-radius: 8px;
             padding: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .roi-title {
@@ -143,15 +133,15 @@
         .table-container {
             width: 100%;
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
-            -webkit-overflow-scrolling: touch;
         }
 
         .platform-table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 800px;
+            min-width: 600px;
         }
 
         .table-header {
@@ -160,15 +150,14 @@
         }
 
         .table-header th {
-            padding: 15px 20px;
+            padding: 12px 15px;
             text-align: left;
             font-size: 14px;
             font-weight: normal;
-            white-space: nowrap;
         }
 
         .table-row td {
-            padding: 15px 20px;
+            padding: 12px 15px;
             font-size: 14px;
             color: #333333;
             border-bottom: 1px solid #e0e0e0;
@@ -179,60 +168,33 @@
         }
 
         @media (max-width: 768px) {
-            .top-container {
-                padding: 15px;
-            }
-
-            .content-container {
-                padding: 0 15px;
-            }
-
-            .save-button {
-                position: static;
-                width: 100%;
-                margin-top: 15px;
-            }
-
             .roi-title {
                 font-size: 20px;
             }
 
             .tab {
-                padding: 12px 15px;
+                padding: 10px 12px;
+                font-size: 13px;
             }
         }
 
         @media (max-width: 480px) {
-            .header {
+            .header, .top-container, .content-container {
                 padding: 15px;
             }
 
-            .top-container,
-            .content-container {
-                padding: 10px;
+            .tab {
+                padding: 8px 10px;
+                font-size: 12px;
             }
 
-            .roi-box {
-                padding: 15px;
-                border-radius: 6px;
-            }
-
-            .table-container {
-                border-radius: 6px;
-            }
-
-            .breadcrumb {
-                font-size: 13px;
-            }
-
-            .meta {
-                font-size: 13px;
+            .roi-title {
+                font-size: 18px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Rest of the HTML remains exactly the same -->
     <div class="header">
         <img src="vgtm-logo.png" alt="vGTM Logo" class="logo">
     </div>
@@ -241,7 +203,7 @@
         <div class="breadcrumb">
             <a href="dashboard.html">Dashboard</a>
             <span>></span>
-            <div class="playbook-title">Marketing Playbook: MedPathway</div>
+            <span>Marketing Playbook: MedPathway</span>
         </div>
 
         <div class="meta">
@@ -253,7 +215,7 @@
         <div class="tab-bar">
             <a href="#" class="tab active">Growth Strategy</a>
             <a href="#" class="tab">Action Plan</a>
-            <a href="#" class="tab">Success Metrics</a>
+            <a href="#" class="tab">Success</a>
         </div>
     </div>
 
@@ -280,7 +242,16 @@
                         <td>450,000+ pre-med students</td>
                         <td>Focus on r/premed and r/MCAT with valuable planning tips</td>
                     </tr>
-                    <!-- Rest of the table rows remain the same -->
+                    <tr class="table-row">
+                        <td>LinkedIn</td>
+                        <td>25,000+ pre-med advisors</td>
+                        <td>Partner with advisors to reach their student networks</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Google Search</td>
+                        <td>8,500 monthly searches</td>
+                        <td>Target "pre-med planning" and "MCAT preparation" keywords</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
