@@ -63,7 +63,7 @@
             background-color: #4A4FE4;
             color: white;
             border: none;
-            border-radius: 12px;
+            border-radius: 6px;
             padding: 15px 30px;
             font-size: 16px;
             cursor: pointer;
@@ -76,34 +76,41 @@
         .tab-bar {
             display: flex;
             border: 1px solid #e0e0e0;
-            border-radius: 12px;
+            border-radius: 6px;
             overflow: hidden;
             margin-bottom: 20px;
             width: 100%;
             background: white;
-            padding: 3px;
-            gap: 3px;
         }
 
         .tab {
-            padding: 12px;
+            padding: 12px 24px;
             color: #666666;
             text-decoration: none;
             font-size: 16px;
             flex: 1;
             text-align: center;
-            border-radius: 8px;
+            border-right: 1px solid #e0e0e0;
             white-space: normal;
             line-height: 1.2;
-            min-height: 48px;
             display: flex;
             align-items: center;
             justify-content: center;
+            background: white;
+        }
+
+        .tab:last-child {
+            border-right: none;
         }
 
         .tab.active {
             background-color: #4A4FE4;
             color: white;
+            border-right: none;
+        }
+
+        .tab.active + .tab {
+            border-left: none;
         }
 
         .content-container {
@@ -115,7 +122,7 @@
 
         .roi-box {
             background-color: #f8f8f8;
-            border-radius: 12px;
+            border-radius: 8px;
             padding: 25px;
             margin-bottom: 25px;
         }
@@ -154,7 +161,7 @@
             -webkit-overflow-scrolling: touch;
             background: white;
             border: 1px solid #e0e0e0;
-            border-radius: 12px;
+            border-radius: 8px;
         }
 
         .platform-table {
@@ -196,8 +203,8 @@
             }
 
             .tab {
+                padding: 12px 8px;
                 font-size: 14px;
-                padding: 10px 8px;
             }
             
             .table-container {
@@ -219,14 +226,9 @@
                 padding: 15px;
             }
 
-            .tab-bar {
-                gap: 2px;
-                padding: 2px;
-            }
-            
             .tab {
+                padding: 10px 6px;
                 font-size: 13px;
-                padding: 8px 4px;
             }
 
             .roi-title {
@@ -260,7 +262,7 @@
         <div class="tab-bar">
             <a href="#" class="tab active">Growth Strategy</a>
             <a href="#" class="tab">Action Plan</a>
-            <a href="#" class="tab">Success</a>
+            <a href="#" class="tab">Success Metrics</a>
         </div>
     </div>
 
