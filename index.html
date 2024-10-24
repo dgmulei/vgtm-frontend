@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            padding: 20px 40px;
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #ffffff;
+        }
+
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+        }
+
+        .nav-item {
+            border-bottom: 1px solid #e0e0e0;
+            padding: 15px 20px;
+        }
+
+        .nav-item:last-child {
+            border-bottom: none;
+        }
+
+        .nav-link {
+            color: #4A4FE4;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+        }
+
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .description {
+            color: #666666;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="vgtm-logo.png" alt="vGTM Logo" class="logo">
+    </div>
+
+    <div class="container">
+        <h1>vGTM Frontend Pages</h1>
+        
+        <ul class="nav-list">
+            <li class="nav-item">
+                <a href="vgtm-login.html" class="nav-link">Login Page</a>
+                <div class="description">User authentication entry point</div>
+            </li>
+            <li class="nav-item">
+                <a href="vgtm-register.html" class="nav-link">Registration Page</a>
+                <div class="description">New user account creation</div>
+            </li>
+            <li class="nav-item">
+                <a href="vgtm-empty-dashboard.html" class="nav-link">Empty Dashboard</a>
+                <div class="description">Initial dashboard state for new users</div>
+            </li>
+            <li class="nav-item">
+                <a href="vgtm-populated-dashboard.html" class="nav-link">Populated Dashboard</a>
+                <div class="description">Dashboard with existing playbooks</div>
+            </li>
+            <li class="nav-item">
+                <a href="vgtm-creation-form.html" class="nav-link">Playbook Creation Form</a>
+                <div class="description">Create a new marketing playbook</div>
+            </li>
+            <li class="nav-item">
+                <a href="vgtm-growth-strategy.html" class="nav-link">Growth Strategy</a>
+                <div class="description">Platform-specific marketing recommendations</div>
+            </li>
+            <li class="nav-item">
+                <a href="vgtm-action-plan.html" class="nav-link">Action Plan</a>
+                <div class="description">30-day marketing execution plan</div>
+            </li>
+            <li class="nav-item">
+                <a href="vgtm-success-metrics.html" class="nav-link">Success Metrics</a>
+                <div class="description">Performance indicators and adjustment triggers</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
