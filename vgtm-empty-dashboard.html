@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -11,31 +19,34 @@
         }
 
         .header {
-            padding: 20px 40px;
+            padding: 20px;
             border-bottom: 1px solid #f0f0f0;
+            background-color: #ffffff;
         }
 
         .logo {
-            width: 80px;
+            height: 40px;
+            width: auto;
         }
 
         .container {
+            width: 100%;
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 40px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
         h1 {
             color: #333333;
             font-size: 28px;
-            margin: 0 0 40px 0;
+            margin: 0 0 30px 0;
             font-weight: 600;
         }
 
         .empty-state {
             background-color: #f8f8f8;
             border-radius: 8px;
-            padding: 60px;
+            padding: 40px 20px;
             text-align: center;
             margin: 20px 0;
         }
@@ -44,12 +55,15 @@
             color: #666666;
             font-size: 18px;
             margin-bottom: 15px;
+            padding: 0 20px;
         }
 
         .empty-state-subtitle {
             color: #666666;
             font-size: 16px;
             margin-bottom: 30px;
+            padding: 0 20px;
+            line-height: 1.4;
         }
 
         .create-button {
@@ -60,6 +74,65 @@
             padding: 15px 30px;
             font-size: 16px;
             cursor: pointer;
+            -webkit-appearance: none;
+            appearance: none;
+            min-width: 200px;
+        }
+
+        .create-button:active {
+            background-color: #4045cc;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+
+            .empty-state {
+                padding: 30px 15px;
+                margin: 10px 0;
+            }
+
+            .empty-state-title {
+                font-size: 16px;
+                padding: 0 10px;
+            }
+
+            .empty-state-subtitle {
+                font-size: 14px;
+                padding: 0 10px;
+            }
+
+            .create-button {
+                width: calc(100% - 40px);
+                min-width: unset;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .header {
+                padding: 15px;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .empty-state {
+                border-radius: 0;
+                margin: 0;
+                padding: 20px 10px;
+            }
+
+            .create-button {
+                width: calc(100% - 20px);
+            }
         }
     </style>
 </head>
