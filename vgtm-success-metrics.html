@@ -8,6 +8,8 @@
     <style>
         * {
             box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
         body {
@@ -34,7 +36,6 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            position: relative;
         }
 
         .breadcrumb {
@@ -52,16 +53,6 @@
             text-decoration: none;
         }
 
-        .breadcrumb span {
-            color: #666666;
-        }
-
-        .playbook-title {
-            color: #333333;
-            font-size: 16px;
-            display: inline;
-        }
-
         .meta {
             color: #666666;
             font-size: 14px;
@@ -73,12 +64,13 @@
             color: white;
             border: none;
             border-radius: 6px;
-            padding: 12px 30px;
-            font-size: 14px;
+            padding: 15px 30px;
+            font-size: 16px;
             cursor: pointer;
+            width: 100%;
+            margin-bottom: 20px;
             -webkit-appearance: none;
             appearance: none;
-            margin-bottom: 20px;
         }
 
         .tab-bar {
@@ -86,23 +78,39 @@
             border: 1px solid #e0e0e0;
             border-radius: 6px;
             overflow: hidden;
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             width: 100%;
+            background: white;
         }
 
         .tab {
-            padding: 12px;
+            padding: 12px 24px;
             color: #666666;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 16px;
             flex: 1;
             text-align: center;
-            white-space: nowrap;
+            border-right: 1px solid #e0e0e0;
+            white-space: normal;
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+
+        .tab:last-child {
+            border-right: none;
         }
 
         .tab.active {
             background-color: #4A4FE4;
             color: white;
+            border-right: none;
+        }
+
+        .tab.active + .tab {
+            border-left: none;
         }
 
         .content-container {
@@ -120,19 +128,20 @@
         }
 
         .overview-title {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 28px;
             color: #333333;
             margin-bottom: 15px;
+            line-height: 1.2;
         }
 
         .overview-text {
-            font-size: 16px;
             color: #333333;
+            font-size: 16px;
             line-height: 1.4;
         }
 
         .metrics-box {
+            background-color: #ffffff;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
             padding: 25px;
@@ -140,8 +149,8 @@
         }
 
         .metrics-title {
-            font-size: 18px;
             color: #4A4FE4;
+            font-size: 18px;
             margin-bottom: 20px;
             line-height: 1.3;
         }
@@ -156,7 +165,7 @@
             color: #333333;
             font-size: 14px;
             margin-bottom: 15px;
-            padding-left: 20px;
+            padding-left: 24px;
             position: relative;
             line-height: 1.4;
         }
@@ -164,8 +173,8 @@
         .metrics-item::before {
             content: "•";
             position: absolute;
-            left: 0;
-            color: #333333;
+            left: 8px;
+            font-size: 20px;
         }
 
         .metrics-item:last-child {
@@ -181,26 +190,13 @@
         }
 
         @media (max-width: 768px) {
-            .top-container {
-                padding: 15px;
-            }
-
-            .content-container {
-                padding: 0 15px;
-            }
-
-            .save-button {
-                position: static;
-                width: 100%;
-                margin-top: 15px;
-            }
-
             .overview-title {
-                font-size: 20px;
+                font-size: 24px;
             }
 
             .tab {
-                padding: 12px 15px;
+                padding: 12px 8px;
+                font-size: 14px;
             }
 
             .metrics-box,
@@ -216,14 +212,16 @@
 
             .top-container,
             .content-container {
-                padding: 10px;
+                padding: 15px;
             }
 
-            .overview-box,
-            .metrics-box,
-            .warning-box {
-                padding: 15px;
-                border-radius: 6px;
+            .tab {
+                padding: 10px 6px;
+                font-size: 13px;
+            }
+
+            .overview-title {
+                font-size: 20px;
             }
 
             .metrics-title {
@@ -232,14 +230,6 @@
 
             .metrics-item {
                 font-size: 14px;
-            }
-
-            .breadcrumb {
-                font-size: 13px;
-            }
-
-            .meta {
-                font-size: 13px;
             }
         }
     </style>
@@ -253,7 +243,7 @@
         <div class="breadcrumb">
             <a href="dashboard.html">Dashboard</a>
             <span>></span>
-            <div class="playbook-title">Marketing Playbook: MedPathway</div>
+            <span>Marketing Playbook: MedPathway</span>
         </div>
 
         <div class="meta">
