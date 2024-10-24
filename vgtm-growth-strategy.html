@@ -3,8 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <style>
-        /* ... previous styles remain the same until tab-bar ... */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            padding: 20px;
+            border-bottom: 1px solid #f0f0f0;
+            background-color: #ffffff;
+        }
+
+        .logo {
+            height: 40px;
+            width: auto;
+        }
+
+        .top-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .breadcrumb {
+            color: #666666;
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .breadcrumb a {
+            color: #666666;
+            text-decoration: none;
+        }
+
+        .meta {
+            color: #666666;
+            font-size: 14px;
+            margin: 8px 0 24px 0;
+        }
+
+        .save-button {
+            background-color: #4A4FE4;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 20px;
+            -webkit-appearance: none;
+            appearance: none;
+        }
 
         .tab-bar {
             display: flex;
@@ -39,6 +106,47 @@
             color: white;
         }
 
+        .content-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .roi-box {
+            background-color: #f8f8f8;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 25px;
+        }
+
+        .roi-title {
+            font-size: 28px;
+            color: #333333;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .roi-insight {
+            color: #333333;
+            font-size: 16px;
+            margin-bottom: 15px;
+            padding-left: 24px;
+            position: relative;
+            line-height: 1.4;
+        }
+
+        .roi-insight::before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            font-size: 20px;
+        }
+
+        .roi-insight:last-child {
+            margin-bottom: 0;
+        }
+
         .table-container {
             margin-top: 20px;
             width: 100%;
@@ -46,7 +154,7 @@
             -webkit-overflow-scrolling: touch;
             background: white;
             border: 1px solid #e0e0e0;
-            border-radius: 8px;
+            border-radius: 12px;
         }
 
         .platform-table {
@@ -54,19 +162,39 @@
             border-collapse: collapse;
         }
 
-        .platform-table th,
-        .platform-table td {
+        .table-header {
+            background-color: #4A4FE4;
+            color: white;
+        }
+
+        .table-header th {
             padding: 15px;
             text-align: left;
+            font-weight: normal;
+            font-size: 14px;
             min-width: 120px;
         }
 
-        .platform-table th:last-child,
-        .platform-table td:last-child {
+        .table-header th:last-child {
             min-width: 200px;
         }
 
+        .table-row td {
+            padding: 15px;
+            font-size: 14px;
+            color: #333333;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .table-row:last-child td {
+            border-bottom: none;
+        }
+
         @media (max-width: 768px) {
+            .roi-title {
+                font-size: 24px;
+            }
+
             .tab {
                 font-size: 14px;
                 padding: 10px 8px;
@@ -82,6 +210,15 @@
         }
 
         @media (max-width: 480px) {
+            .header {
+                padding: 15px;
+            }
+
+            .top-container,
+            .content-container {
+                padding: 15px;
+            }
+
             .tab-bar {
                 gap: 2px;
                 padding: 2px;
@@ -91,10 +228,78 @@
                 font-size: 13px;
                 padding: 8px 4px;
             }
+
+            .roi-title {
+                font-size: 20px;
+            }
+
+            .roi-insight {
+                font-size: 15px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- ... rest of the HTML remains the same ... -->
+    <div class="header">
+        <img src="vgtm-logo.png" alt="vGTM Logo" class="logo">
+    </div>
+
+    <div class="top-container">
+        <div class="breadcrumb">
+            <a href="dashboard.html">Dashboard</a>
+            <span>></span>
+            <span>Marketing Playbook: MedPathway</span>
+        </div>
+
+        <div class="meta">
+            Created Oct 23 • Budget: $5,000
+        </div>
+
+        <button class="save-button">Save Playbook</button>
+
+        <div class="tab-bar">
+            <a href="#" class="tab active">Growth Strategy</a>
+            <a href="#" class="tab">Action Plan</a>
+            <a href="#" class="tab">Success</a>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="roi-box">
+            <div class="roi-title">Here's Where You'll Get the Best Results</div>
+            <div class="roi-insight">Reddit is your goldmine: 450,000+ potential customers actively discussing pre-med topics</div>
+            <div class="roi-insight">Your ads will perform 2x better than average (3-5% click rate)</div>
+            <div class="roi-insight">Each potential customer costs only $0.75 to reach - perfect for your budget</div>
+        </div>
+
+        <div class="table-container">
+            <table class="platform-table">
+                <thead class="table-header">
+                    <tr>
+                        <th>PLATFORM</th>
+                        <th>AUDIENCE</th>
+                        <th>STRATEGY</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="table-row">
+                        <td>Reddit</td>
+                        <td>450,000+ pre-med students</td>
+                        <td>Focus on r/premed and r/MCAT with valuable planning tips</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>LinkedIn</td>
+                        <td>25,000+ pre-med advisors</td>
+                        <td>Partner with advisors to reach their student networks</td>
+                    </tr>
+                    <tr class="table-row">
+                        <td>Google Search</td>
+                        <td>8,500 monthly searches</td>
+                        <td>Target "pre-med planning" and "MCAT preparation" keywords</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
