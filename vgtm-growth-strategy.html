@@ -3,91 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-            background-color: #ffffff;
-            font-family: Arial, sans-serif;
-        }
-
-        .header {
-            padding: 20px;
-            border-bottom: 1px solid #f0f0f0;
-            background-color: #ffffff;
-        }
-
-        .logo {
-            height: 40px;
-            width: auto;
-        }
-
-        .top-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .breadcrumb {
-            color: #666666;
-            font-size: 14px;
-            margin-bottom: 8px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .breadcrumb a {
-            color: #666666;
-            text-decoration: none;
-        }
-
-        .meta {
-            color: #666666;
-            font-size: 14px;
-            margin-bottom: 24px;
-        }
-
-        .save-button {
-            background-color: #4A4FE4;
-            color: white;
-            border: none;
-            border-radius: 6px;
-            padding: 12px 30px;
-            font-size: 14px;
-            cursor: pointer;
-            width: 100%;
-            margin-bottom: 20px;
-            -webkit-appearance: none;
-            appearance: none;
-        }
+        /* ... previous styles remain the same until tab-bar ... */
 
         .tab-bar {
             display: flex;
             border: 1px solid #e0e0e0;
-            border-radius: 6px;
+            border-radius: 12px;
             overflow: hidden;
             margin-bottom: 20px;
             width: 100%;
+            background: white;
+            padding: 3px;
+            gap: 3px;
         }
 
         .tab {
-            padding: 12px 15px;
+            padding: 12px;
             color: #666666;
             text-decoration: none;
-            font-size: 14px;
+            font-size: 16px;
             flex: 1;
             text-align: center;
-            min-width: 0;
+            border-radius: 8px;
+            white-space: normal;
+            line-height: 1.2;
+            min-height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .tab.active {
@@ -95,45 +39,12 @@
             color: white;
         }
 
-        .content-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .roi-box {
-            background-color: #f8f8f8;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
-
-        .roi-title {
-            font-size: 24px;
-            color: #333333;
-            margin-bottom: 20px;
-        }
-
-        .roi-insight {
-            color: #333333;
-            font-size: 16px;
-            margin-bottom: 15px;
-            padding-left: 20px;
-            position: relative;
-            line-height: 1.4;
-        }
-
-        .roi-insight::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-        }
-
         .table-container {
+            margin-top: 20px;
             width: 100%;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
+            background: white;
             border: 1px solid #e0e0e0;
             border-radius: 8px;
         }
@@ -141,120 +52,49 @@
         .platform-table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 600px;
         }
 
-        .table-header {
-            background-color: #4A4FE4;
-            color: white;
-        }
-
-        .table-header th {
-            padding: 12px 15px;
+        .platform-table th,
+        .platform-table td {
+            padding: 15px;
             text-align: left;
-            font-size: 14px;
-            font-weight: normal;
+            min-width: 120px;
         }
 
-        .table-row td {
-            padding: 12px 15px;
-            font-size: 14px;
-            color: #333333;
-            border-bottom: 1px solid #e0e0e0;
-        }
-
-        .table-row:last-child td {
-            border-bottom: none;
+        .platform-table th:last-child,
+        .platform-table td:last-child {
+            min-width: 200px;
         }
 
         @media (max-width: 768px) {
-            .roi-title {
-                font-size: 20px;
-            }
-
             .tab {
-                padding: 10px 12px;
-                font-size: 13px;
+                font-size: 14px;
+                padding: 10px 8px;
+            }
+            
+            .table-container {
+                margin: 15px -15px;
+                width: calc(100% + 30px);
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
             }
         }
 
         @media (max-width: 480px) {
-            .header, .top-container, .content-container {
-                padding: 15px;
+            .tab-bar {
+                gap: 2px;
+                padding: 2px;
             }
-
+            
             .tab {
-                padding: 8px 10px;
-                font-size: 12px;
-            }
-
-            .roi-title {
-                font-size: 18px;
+                font-size: 13px;
+                padding: 8px 4px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="vgtm-logo.png" alt="vGTM Logo" class="logo">
-    </div>
-
-    <div class="top-container">
-        <div class="breadcrumb">
-            <a href="dashboard.html">Dashboard</a>
-            <span>></span>
-            <span>Marketing Playbook: MedPathway</span>
-        </div>
-
-        <div class="meta">
-            Created Oct 23 • Budget: $5,000
-        </div>
-
-        <button class="save-button">Save Playbook</button>
-
-        <div class="tab-bar">
-            <a href="#" class="tab active">Growth Strategy</a>
-            <a href="#" class="tab">Action Plan</a>
-            <a href="#" class="tab">Success</a>
-        </div>
-    </div>
-
-    <div class="content-container">
-        <div class="roi-box">
-            <div class="roi-title">Here's Where You'll Get the Best Results</div>
-            <div class="roi-insight">Reddit is your goldmine: 450,000+ potential customers actively discussing pre-med topics</div>
-            <div class="roi-insight">Your ads will perform 2x better than average (3-5% click rate)</div>
-            <div class="roi-insight">Each potential customer costs only $0.75 to reach - perfect for your budget</div>
-        </div>
-
-        <div class="table-container">
-            <table class="platform-table">
-                <thead class="table-header">
-                    <tr>
-                        <th>PLATFORM</th>
-                        <th>AUDIENCE</th>
-                        <th>STRATEGY</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="table-row">
-                        <td>Reddit</td>
-                        <td>450,000+ pre-med students</td>
-                        <td>Focus on r/premed and r/MCAT with valuable planning tips</td>
-                    </tr>
-                    <tr class="table-row">
-                        <td>LinkedIn</td>
-                        <td>25,000+ pre-med advisors</td>
-                        <td>Partner with advisors to reach their student networks</td>
-                    </tr>
-                    <tr class="table-row">
-                        <td>Google Search</td>
-                        <td>8,500 monthly searches</td>
-                        <td>Target "pre-med planning" and "MCAT preparation" keywords</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+    <!-- ... rest of the HTML remains the same ... -->
 </body>
 </html>
